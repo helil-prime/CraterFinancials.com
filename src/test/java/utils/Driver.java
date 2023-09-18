@@ -27,8 +27,6 @@ public class Driver {
 				    chromeOptions = new ChromeOptions();
 					chromeOptions.setPageLoadStrategy(PageLoadStrategy.NORMAL);
 					chromeOptions.addArguments("--headless");
-				        chromeOptions..addArguments("--disable-dev-shm-usage");
-                                        chromeOptions.addArguments("--no-sandbox");
 					driver = new ChromeDriver(chromeOptions);
 					break;
 				case "chrome" :
