@@ -16,7 +16,7 @@
 #""
 ## (Comments)
 #Sample Feature Definition Template
-@userManagement
+@userManagement @Regression
 Feature: User management / access management
 
   @validLogin @smokeTest

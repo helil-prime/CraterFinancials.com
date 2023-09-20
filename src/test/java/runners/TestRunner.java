@@ -11,7 +11,7 @@ import io.cucumber.junit.CucumberOptions;
 				"json:Cucumber_reports/cucumber_report.json"},
 		features="./src/test/resources/features", // this to specify the location of the feature files so cucumber can find
 		glue="tests",  // this to specify the location of step definitions so that cucumber can map with the scenario steps
-		tags="@newCustomers"  
+		tags="@smokeTest"  
 		)
 public class TestRunner {
 
