@@ -1,11 +1,11 @@
-@customerManagementTests
+@customerManagementTests @Regression
 Feature: Customer management
 
   Background: 
     Given As an entity user, I am logged in
     When I navigate to the customers tab
 
-  @newCustomerBTNTest
+  @newCustomerBTNTest @smokeTest
   Scenario: As a user when I navigate to the Customers Tab, I should see New customer button
     Then I should see the New Customer button displayed
 
