@@ -1,16 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-09-21T21:32:09 EDT" name="Default suite" finished-at="2023-09-21T21:32:11 EDT" duration-ms="1602">
+  <suite started-at="2023-09-25T21:21:24 EDT" name="Default suite" finished-at="2023-09-25T21:21:27 EDT" duration-ms="3075">
     <groups>
     </groups>
-    <test started-at="2023-09-21T21:32:09 EDT" name="Default test" finished-at="2023-09-21T21:32:11 EDT" duration-ms="1602">
+    <test started-at="2023-09-25T21:21:24 EDT" name="Default test" finished-at="2023-09-25T21:21:27 EDT" duration-ms="3075">
       <class name="api_tests.PetStoreAPI_Tests">
-        <test-method signature="getApetByID()[pri:0, instance:api_tests.PetStoreAPI_Tests@7714e963]" started-at="2023-09-21T21:32:09 EDT" name="getApetByID" finished-at="2023-09-21T21:32:11 EDT" duration-ms="1567" status="PASS">
+        <test-method signature="create_a_pet()[pri:0, instance:api_tests.PetStoreAPI_Tests@393671df]" started-at="2023-09-25T21:21:24 EDT" name="create_a_pet" finished-at="2023-09-25T21:21:26 EDT" duration-ms="1409" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- create_a_pet -->
+        <test-method signature="getPetsByStatus()[pri:0, instance:api_tests.PetStoreAPI_Tests@393671df]" started-at="2023-09-25T21:21:26 EDT" name="getPetsByStatus" finished-at="2023-09-25T21:21:26 EDT" duration-ms="112" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getPetsByStatus -->
+        <test-method signature="invalidGetPetByID()[pri:0, instance:api_tests.PetStoreAPI_Tests@393671df]" started-at="2023-09-25T21:21:26 EDT" name="invalidGetPetByID" finished-at="2023-09-25T21:21:26 EDT" duration-ms="101" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- invalidGetPetByID -->
+        <test-method signature="getApetByID()[pri:0, instance:api_tests.PetStoreAPI_Tests@393671df]" started-at="2023-09-25T21:21:26 EDT" name="getApetByID" finished-at="2023-09-25T21:21:26 EDT" depends-on-methods="api_tests.PetStoreAPI_Tests.create_a_pet" duration-ms="188" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getApetByID -->
+        <test-method signature="update_a_pet()[pri:0, instance:api_tests.PetStoreAPI_Tests@393671df]" started-at="2023-09-25T21:21:26 EDT" name="update_a_pet" finished-at="2023-09-25T21:21:26 EDT" depends-on-methods="api_tests.PetStoreAPI_Tests.getApetByID" duration-ms="135" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- update_a_pet -->
+        <test-method signature="delete_the_pet()[pri:0, instance:api_tests.PetStoreAPI_Tests@393671df]" started-at="2023-09-25T21:21:26 EDT" name="delete_the_pet" finished-at="2023-09-25T21:21:27 EDT" depends-on-methods="api_tests.PetStoreAPI_Tests.update_a_pet" duration-ms="1091" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- delete_the_pet -->
       </class> <!-- api_tests.PetStoreAPI_Tests -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
