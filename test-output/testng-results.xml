@@ -1,37 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-09-25T21:21:24 EDT" name="Default suite" finished-at="2023-09-25T21:21:27 EDT" duration-ms="3075">
+  <suite started-at="2023-09-26T21:25:24 EDT" name="Default suite" finished-at="2023-09-26T21:25:26 EDT" duration-ms="2164">
     <groups>
     </groups>
-    <test started-at="2023-09-25T21:21:24 EDT" name="Default test" finished-at="2023-09-25T21:21:27 EDT" duration-ms="3075">
-      <class name="api_tests.PetStoreAPI_Tests">
-        <test-method signature="create_a_pet()[pri:0, instance:api_tests.PetStoreAPI_Tests@393671df]" started-at="2023-09-25T21:21:24 EDT" name="create_a_pet" finished-at="2023-09-25T21:21:26 EDT" duration-ms="1409" status="PASS">
+    <test started-at="2023-09-26T21:25:24 EDT" name="Default test" finished-at="2023-09-26T21:25:26 EDT" duration-ms="2164">
+      <class name="api_tests.CraterApiTests">
+        <test-method signature="login()[pri:0, instance:api_tests.CraterApiTests@40ef3420]" started-at="2023-09-26T21:25:24 EDT" name="login" finished-at="2023-09-26T21:25:26 EDT" duration-ms="1424" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- create_a_pet -->
-        <test-method signature="getPetsByStatus()[pri:0, instance:api_tests.PetStoreAPI_Tests@393671df]" started-at="2023-09-25T21:21:26 EDT" name="getPetsByStatus" finished-at="2023-09-25T21:21:26 EDT" duration-ms="112" status="PASS">
+        </test-method> <!-- login -->
+        <test-method signature="create_an_item()[pri:0, instance:api_tests.CraterApiTests@40ef3420]" started-at="2023-09-26T21:25:26 EDT" name="create_an_item" finished-at="2023-09-26T21:25:26 EDT" depends-on-methods="api_tests.CraterApiTests.login" duration-ms="426" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getPetsByStatus -->
-        <test-method signature="invalidGetPetByID()[pri:0, instance:api_tests.PetStoreAPI_Tests@393671df]" started-at="2023-09-25T21:21:26 EDT" name="invalidGetPetByID" finished-at="2023-09-25T21:21:26 EDT" duration-ms="101" status="PASS">
+        </test-method> <!-- create_an_item -->
+        <test-method signature="delete_the_item()[pri:0, instance:api_tests.CraterApiTests@40ef3420]" started-at="2023-09-26T21:25:26 EDT" name="delete_the_item" finished-at="2023-09-26T21:25:26 EDT" depends-on-methods="api_tests.CraterApiTests.create_an_item" duration-ms="164" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- invalidGetPetByID -->
-        <test-method signature="getApetByID()[pri:0, instance:api_tests.PetStoreAPI_Tests@393671df]" started-at="2023-09-25T21:21:26 EDT" name="getApetByID" finished-at="2023-09-25T21:21:26 EDT" depends-on-methods="api_tests.PetStoreAPI_Tests.create_a_pet" duration-ms="188" status="PASS">
+        </test-method> <!-- delete_the_item -->
+        <test-method signature="logout()[pri:0, instance:api_tests.CraterApiTests@40ef3420]" started-at="2023-09-26T21:25:26 EDT" name="logout" finished-at="2023-09-26T21:25:26 EDT" depends-on-methods="api_tests.CraterApiTests.delete_the_item" duration-ms="113" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getApetByID -->
-        <test-method signature="update_a_pet()[pri:0, instance:api_tests.PetStoreAPI_Tests@393671df]" started-at="2023-09-25T21:21:26 EDT" name="update_a_pet" finished-at="2023-09-25T21:21:26 EDT" depends-on-methods="api_tests.PetStoreAPI_Tests.getApetByID" duration-ms="135" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- update_a_pet -->
-        <test-method signature="delete_the_pet()[pri:0, instance:api_tests.PetStoreAPI_Tests@393671df]" started-at="2023-09-25T21:21:26 EDT" name="delete_the_pet" finished-at="2023-09-25T21:21:27 EDT" depends-on-methods="api_tests.PetStoreAPI_Tests.update_a_pet" duration-ms="1091" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- delete_the_pet -->
-      </class> <!-- api_tests.PetStoreAPI_Tests -->
+        </test-method> <!-- logout -->
+      </class> <!-- api_tests.CraterApiTests -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
