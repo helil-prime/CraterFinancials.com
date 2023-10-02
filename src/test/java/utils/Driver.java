@@ -1,20 +1,28 @@
 package utils;
 
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.HashMap;
+import java.util.Map;
+
 import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.safari.SafariDriver;
+import org.openqa.selenium.safari.SafariOptions;
 
 
 public class Driver {
 	
 	public static WebDriver driver;
 	static ChromeOptions chromeOptions;
+	static URL url;
 
 		public static WebDriver getDriver() {
 			String browser = System.getProperty("browser");
@@ -42,6 +50,24 @@ public class Driver {
 					break;
 				case "safari" :
 					driver = new SafariDriver();
+					break;
+				case "saucelabs" :
+					SafariOptions browserOptions = new SafariOptions();
+					browserOptions.setPlatformName("macOS 10.15");
+					browserOptions.setBrowserVersion("15");
+					Map<String, Object> sauceOptions = new HashMap<>();
+					sauceOptions.put("username", "helil-batch5");
+					sauceOptions.put("accessKey", "yourAccessKey");
+					sauceOptions.put("build", "003");
+					sauceOptions.put("name", "macos10_exc1");
+					browserOptions.setCapability("sauce:options", sauceOptions);
+					try {
+						url = new URL("https://ondemand.us-west-1.saucelabs.com:443/wd/hub");
+					} catch (MalformedURLException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+					driver = new RemoteWebDriver(url, browserOptions);
 					break;
 				case "edge" :
 					driver = new EdgeDriver();
