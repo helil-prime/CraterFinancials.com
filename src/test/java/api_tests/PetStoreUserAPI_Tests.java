@@ -1,5 +1,8 @@
 package api_tests;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -125,5 +128,59 @@ public class PetStoreUserAPI_Tests {
 		response.prettyPrint();
 		
 		Assert.assertNotNull(response.jsonPath().get("message").toString());
+	}
+	
+	@Test (dependsOnMethods = "loginNewUser")
+	public void logoutUser() {
+		String endpoint = "/user/logout";
+		
+		response = RestAssured.given()
+			.header("accept", "application/json")
+		.when()
+			.get(baseURL+endpoint);
+		
+		response.then()
+			.statusCode(200)
+			.contentType("application/json");
+		
+		response.prettyPrint();
+		Assert.assertEquals(response.path("message").toString(), "ok");
+	}
+	
+	@Test (dependsOnMethods = "createNewUser")
+	public void updateExistingUser() {
+		String endpoint = "/user/" + username;
+		int newId = utils.randomNumber();
+		String newUsername = faker.name().username();
+		String newFirstName = faker.name().firstName();
+		String newlastName = faker.name().lastName();
+		String newemail = firstName+lastName+"@gmail.com";
+		String newpassword = "Pass123";
+		String newphone = faker.phoneNumber().toString();
+		
+		Map<String, Object> requestHeaders = new HashMap<>();
+		requestHeaders.put("accept", "application/json");
+		requestHeaders.put("Content-Type", "application/json");
+		
+		Map<String, Object> requestBody = new HashMap<>();
+		requestBody.put("id", newId);
+		requestBody.put("username", newUsername);
+		requestBody.put("firstName", newFirstName);
+		requestBody.put("lastName", newlastName);
+		requestBody.put("email", newemail);
+		requestBody.put("password", newpassword);
+		requestBody.put("phone", newphone);
+		
+		response = RestAssured.given()
+			.headers(requestHeaders)
+			.body(requestBody)
+		.when()
+			.put(baseURL+endpoint);
+		
+		response.then()
+			.statusCode(200)
+			.contentType("application/json");
+		
+		response.prettyPrint();
 	}
 }

@@ -1,21 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-09-27T21:28:54 EDT" name="Default suite" finished-at="2023-09-27T21:29:02 EDT" duration-ms="7971">
+  <suite started-at="2023-09-28T21:35:15 EDT" name="Default suite" finished-at="2023-09-28T21:35:20 EDT" duration-ms="4409">
     <groups>
     </groups>
-    <test started-at="2023-09-27T21:28:54 EDT" name="Default test" finished-at="2023-09-27T21:29:02 EDT" duration-ms="7971">
-      <class name="api_tests.PetStoreUserAPI_Tests">
-        <test-method signature="createNewUser()[pri:0, instance:api_tests.PetStoreUserAPI_Tests@5542c4ed]" started-at="2023-09-27T21:28:54 EDT" name="createNewUser" finished-at="2023-09-27T21:29:01 EDT" duration-ms="7446" status="PASS">
+    <test started-at="2023-09-28T21:35:15 EDT" name="Default test" finished-at="2023-09-28T21:35:20 EDT" duration-ms="4409">
+      <class name="api_tests.CraterCustomersAPITests">
+        <test-method signature="craterLogin()[pri:0, instance:api_tests.CraterCustomersAPITests@7586beff]" started-at="2023-09-28T21:35:15 EDT" name="craterLogin" finished-at="2023-09-28T21:35:17 EDT" duration-ms="1382" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createNewUser -->
-        <test-method signature="getAUserWithUserName()[pri:0, instance:api_tests.PetStoreUserAPI_Tests@5542c4ed]" started-at="2023-09-27T21:29:01 EDT" name="getAUserWithUserName" finished-at="2023-09-27T21:29:02 EDT" depends-on-methods="api_tests.PetStoreUserAPI_Tests.createNewUser" duration-ms="496" status="PASS">
+        </test-method> <!-- craterLogin -->
+        <test-method signature="listAllCustomers()[pri:1, instance:api_tests.CraterCustomersAPITests@7586beff]" started-at="2023-09-28T21:35:17 EDT" name="listAllCustomers" finished-at="2023-09-28T21:35:18 EDT" depends-on-methods="api_tests.CraterCustomersAPITests.craterLogin" duration-ms="1884" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getAUserWithUserName -->
-      </class> <!-- api_tests.PetStoreUserAPI_Tests -->
+        </test-method> <!-- listAllCustomers -->
+        <test-method signature="createNewCustomer()[pri:2, instance:api_tests.CraterCustomersAPITests@7586beff]" started-at="2023-09-28T21:35:18 EDT" name="createNewCustomer" finished-at="2023-09-28T21:35:19 EDT" depends-on-methods="api_tests.CraterCustomersAPITests.craterLogin" duration-ms="460" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createNewCustomer -->
+        <test-method signature="retrieveCustomerWithId()[pri:0, instance:api_tests.CraterCustomersAPITests@7586beff]" started-at="2023-09-28T21:35:19 EDT" name="retrieveCustomerWithId" finished-at="2023-09-28T21:35:19 EDT" depends-on-methods="api_tests.CraterCustomersAPITests.createNewCustomer" duration-ms="300" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- retrieveCustomerWithId -->
+        <test-method signature="updateExisitingCustomer()[pri:0, instance:api_tests.CraterCustomersAPITests@7586beff]" started-at="2023-09-28T21:35:19 EDT" name="updateExisitingCustomer" finished-at="2023-09-28T21:35:20 EDT" depends-on-methods="api_tests.CraterCustomersAPITests.createNewCustomer" duration-ms="344" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateExisitingCustomer -->
+      </class> <!-- api_tests.CraterCustomersAPITests -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
