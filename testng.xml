@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Crater_API_Regression">
+	<test name="API_Test_Execution">
+		<classes>
+			<class name="api_tests.PetStoreAPI_Tests"></class>
+			<class name="api_tests.CraterApiTests"></class>
+		</classes>
+	</test>
+</suite>
