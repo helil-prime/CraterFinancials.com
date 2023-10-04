@@ -17,7 +17,6 @@ public WebElement customer_page_Customers_TextHeader;
 @FindBy (xpath = "//button[text()=' New Customer']")
 public WebElement customer_page_NewCustomerBTN;
 
-
 @FindBy (xpath = "//h6[text()='Basic Info']")
 public WebElement customer_page_BasicInfo_Form_Label;
 

@@ -1,33 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+<testng-results ignored="0" total="11" passed="11" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-09-28T21:35:15 EDT" name="Default suite" finished-at="2023-09-28T21:35:20 EDT" duration-ms="4409">
+  <suite started-at="2023-10-03T19:57:34 EDT" name="Crater_API_Regression" finished-at="2023-10-03T19:57:40 EDT" duration-ms="6504">
     <groups>
     </groups>
-    <test started-at="2023-09-28T21:35:15 EDT" name="Default test" finished-at="2023-09-28T21:35:20 EDT" duration-ms="4409">
-      <class name="api_tests.CraterCustomersAPITests">
-        <test-method signature="craterLogin()[pri:0, instance:api_tests.CraterCustomersAPITests@7586beff]" started-at="2023-09-28T21:35:15 EDT" name="craterLogin" finished-at="2023-09-28T21:35:17 EDT" duration-ms="1382" status="PASS">
+    <test started-at="2023-10-03T19:57:34 EDT" name="API_Test_Execution" finished-at="2023-10-03T19:57:40 EDT" duration-ms="6504">
+      <class name="api_tests.CraterApiTests">
+        <test-method signature="fakerTest()[pri:0, instance:api_tests.CraterApiTests@42e99e4a]" started-at="2023-10-03T19:57:39 EDT" name="fakerTest" finished-at="2023-10-03T19:57:39 EDT" duration-ms="140" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- craterLogin -->
-        <test-method signature="listAllCustomers()[pri:1, instance:api_tests.CraterCustomersAPITests@7586beff]" started-at="2023-09-28T21:35:17 EDT" name="listAllCustomers" finished-at="2023-09-28T21:35:18 EDT" depends-on-methods="api_tests.CraterCustomersAPITests.craterLogin" duration-ms="1884" status="PASS">
+        </test-method> <!-- fakerTest -->
+        <test-method signature="login()[pri:0, instance:api_tests.CraterApiTests@42e99e4a]" started-at="2023-10-03T19:57:39 EDT" name="login" finished-at="2023-10-03T19:57:40 EDT" duration-ms="338" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- listAllCustomers -->
-        <test-method signature="createNewCustomer()[pri:2, instance:api_tests.CraterCustomersAPITests@7586beff]" started-at="2023-09-28T21:35:18 EDT" name="createNewCustomer" finished-at="2023-09-28T21:35:19 EDT" depends-on-methods="api_tests.CraterCustomersAPITests.craterLogin" duration-ms="460" status="PASS">
+        </test-method> <!-- login -->
+        <test-method signature="create_an_item()[pri:0, instance:api_tests.CraterApiTests@42e99e4a]" started-at="2023-10-03T19:57:40 EDT" name="create_an_item" finished-at="2023-10-03T19:57:40 EDT" depends-on-methods="api_tests.CraterApiTests.login" duration-ms="362" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createNewCustomer -->
-        <test-method signature="retrieveCustomerWithId()[pri:0, instance:api_tests.CraterCustomersAPITests@7586beff]" started-at="2023-09-28T21:35:19 EDT" name="retrieveCustomerWithId" finished-at="2023-09-28T21:35:19 EDT" depends-on-methods="api_tests.CraterCustomersAPITests.createNewCustomer" duration-ms="300" status="PASS">
+        </test-method> <!-- create_an_item -->
+        <test-method signature="delete_the_item()[pri:0, instance:api_tests.CraterApiTests@42e99e4a]" started-at="2023-10-03T19:57:40 EDT" name="delete_the_item" finished-at="2023-10-03T19:57:40 EDT" depends-on-methods="api_tests.CraterApiTests.create_an_item" duration-ms="163" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- retrieveCustomerWithId -->
-        <test-method signature="updateExisitingCustomer()[pri:0, instance:api_tests.CraterCustomersAPITests@7586beff]" started-at="2023-09-28T21:35:19 EDT" name="updateExisitingCustomer" finished-at="2023-09-28T21:35:20 EDT" depends-on-methods="api_tests.CraterCustomersAPITests.createNewCustomer" duration-ms="344" status="PASS">
+        </test-method> <!-- delete_the_item -->
+        <test-method signature="logout()[pri:0, instance:api_tests.CraterApiTests@42e99e4a]" started-at="2023-10-03T19:57:40 EDT" name="logout" finished-at="2023-10-03T19:57:40 EDT" depends-on-methods="api_tests.CraterApiTests.delete_the_item" duration-ms="109" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- updateExisitingCustomer -->
-      </class> <!-- api_tests.CraterCustomersAPITests -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- logout -->
+      </class> <!-- api_tests.CraterApiTests -->
+      <class name="api_tests.PetStoreAPI_Tests">
+        <test-method signature="create_a_pet()[pri:0, instance:api_tests.PetStoreAPI_Tests@59fd97a8]" started-at="2023-10-03T19:57:34 EDT" name="create_a_pet" finished-at="2023-10-03T19:57:39 EDT" duration-ms="4732" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- create_a_pet -->
+        <test-method signature="getPetsByStatus()[pri:0, instance:api_tests.PetStoreAPI_Tests@59fd97a8]" started-at="2023-10-03T19:57:39 EDT" name="getPetsByStatus" finished-at="2023-10-03T19:57:39 EDT" duration-ms="116" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getPetsByStatus -->
+        <test-method signature="invalidGetPetByID()[pri:0, instance:api_tests.PetStoreAPI_Tests@59fd97a8]" started-at="2023-10-03T19:57:39 EDT" name="invalidGetPetByID" finished-at="2023-10-03T19:57:39 EDT" duration-ms="115" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- invalidGetPetByID -->
+        <test-method signature="getApetByID()[pri:0, instance:api_tests.PetStoreAPI_Tests@59fd97a8]" started-at="2023-10-03T19:57:39 EDT" name="getApetByID" finished-at="2023-10-03T19:57:39 EDT" depends-on-methods="api_tests.PetStoreAPI_Tests.create_a_pet" duration-ms="181" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getApetByID -->
+        <test-method signature="update_a_pet()[pri:0, instance:api_tests.PetStoreAPI_Tests@59fd97a8]" started-at="2023-10-03T19:57:39 EDT" name="update_a_pet" finished-at="2023-10-03T19:57:39 EDT" depends-on-methods="api_tests.PetStoreAPI_Tests.getApetByID" duration-ms="107" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- update_a_pet -->
+        <test-method signature="delete_the_pet()[pri:0, instance:api_tests.PetStoreAPI_Tests@59fd97a8]" started-at="2023-10-03T19:57:39 EDT" name="delete_the_pet" finished-at="2023-10-03T19:57:39 EDT" depends-on-methods="api_tests.PetStoreAPI_Tests.update_a_pet" duration-ms="95" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- delete_the_pet -->
+      </class> <!-- api_tests.PetStoreAPI_Tests -->
+    </test> <!-- API_Test_Execution -->
+  </suite> <!-- Crater_API_Regression -->
 </testng-results>
